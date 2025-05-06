@@ -6,303 +6,45 @@
   <title>SuperToy SuperFood | งานแสดงศิลปะ & อาหารแฟนตาซี</title>
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
   <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css' rel='stylesheet' />
- <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Kanit', sans-serif;
-      background: #0f0f1a;
-      color: #f1f1f1;
-      line-height: 1.6;
-    }
-    header {
-      background: linear-gradient(to right, #FF0080, #7928CA);
-      color: white;
-      padding: 2.5rem;
-      text-align: center;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-    }
-    header img.logo {
-      max-width: 100%;
-      width: 500px;
-      margin-bottom: 1rem;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 1rem;
-      flex-wrap: wrap;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      padding: 3rem 2rem;
-      max-width: 1100px;
-      margin: auto;
-      background: rgba(30, 30, 46, 0.85);
-      border-radius: 16px;
-      margin-top: 2rem;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(8px);
-    }
-    h2 {
-      color: #FF00C8;
-      margin-bottom: 1.2rem;
-      background: #1a1a2e;
-      padding: 1rem;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(255, 0, 200, 0.3);
-    }
-    ul li {
-      margin-bottom: 0.75rem;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-    .gallery img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-    }
-    footer {
-      background: #141420;
-      color: white;
-      text-align: center;
-      padding: 2rem;
-    }
-    #calendar {
-      max-width: 700px;
-      margin: 2rem auto 0;
-      background: white;
-      color: black;
-      border-radius: 12px;
-      padding: 1rem;
-      box-shadow: 0 0 15px rgba(0,0,0,0.3);
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-      color: white;
-    }
-    th, td {
-      border: 1px solid #555;
-      padding: 0.75rem;
-      text-align: left;
-    }
-    th {
-      background: #2a2a3b;
-    }
-    td.highlight {
-      font-weight: bold;
-      background: #333;
-    }
-    .fc-daygrid-day-number {
-      font-size: 0.85rem;
-      color: black;
-    }
-   #artists {
-  padding: 4rem 2rem;
-  background: rgba(30, 30, 46, 0.9);
-  border-radius: 16px;
-  box-shadow: 0 0 25px rgba(255, 0, 200, 0.1);
-  backdrop-filter: blur(6px);
-}
-
-#artists h2 {
-  text-align: center;
-  color: #FF00C8;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  padding: 1rem;
-  background: #1a1a2e;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(255, 0, 200, 0.3);
-}
-
-.artists {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 2rem;
-  justify-items: center;
-}
-
-.artist-card {
-  background: #20202f;
-  border-radius: 16px;
-  padding: 1rem;
-  text-align: center;
-  color: white;
-  width: 100%;
-  max-width: 300px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-
-.artist-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 30px rgba(255, 0, 200, 0.4);
-}
-
-.artist-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 1rem;
-}
-
-.artist-card h3 {
-  font-size: 1.2rem;
-  color: #FF00C8;
-}
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header>
-  <img src="https://raw.githubusercontent.com/sopwerdream/Super-Toy-Super-Food/refs/heads/main/assets/supertoy-logo.png" alt="SuperToy SuperFood Logo" class="logo">
+  <img src="https://raw.githubusercontent.com/sopwerdream/Super-Toy-Super-Food/main/assets/supertoy-logo.png" alt="SuperToy SuperFood Logo" class="logo">
   <p>นิทรรศการศิลปะและอาหารสร้างสรรค์ ณ ห้าง Phenix</p>
   <nav>
     <a href="#about">เกี่ยวกับโครงการ</a>
     <a href="#calendar-section">ปฏิทินกิจกรรม</a>
     <a href="#gallery">แกลเลอรี่</a>
-    <a href="#contact">ติดต่อ</a>
+    <a href="#artists">ศิลปิน</a>
   </nav>
 </header>
 
-<section id="about">
-  <h2>เกี่ยวกับโครงการ</h2>
-  <p>SuperToy SuperFood คือเวทีแห่งความคิดสร้างสรรค์ ที่เปิดโอกาสให้ศิลปินไทยได้นำเสนอผลงาน Art Toy ควบคู่กับการออกแบบเมนูอาหารแฟนตาซี เพื่อจัดแสดงในพื้นที่สุดล้ำที่ห้างสรรพสินค้า Phenix</p>
-
-  <h2>1. หลักการและเหตุผล</h2>
-  <p>ในยุคที่วัฒนธรรมป๊อปและการออกแบบร่วมสมัยกลายเป็นพลังสำคัญในการขับเคลื่อนเศรษฐกิจสร้างสรรค์ (Creative Economy) ศิลปะในรูปแบบของ Art Toy ได้กลายมาเป็นอีกหนึ่ง Soft Power ที่เติบโตอย่างรวดเร็ว ทั้งในระดับประเทศและระดับโลก</p>
-  <p>โครงการ “ซุปเปอร์ทอย ซุปเปอร์ฟู๊ด” ได้รับแรงบันดาลใจจากการผสมผสานระหว่างโลกแห่งจินตนาการของ Art Toy กับโลกแห่งความสุขของอาหารสุดครีเอทีฟ โดยจัดขึ้น ณ ห้างสรรพสินค้า Phenix เพื่อเปิดพื้นที่สร้างแรงบันดาลใจ สร้างตลาดใหม่สำหรับนักสร้างสรรค์ และมอบประสบการณ์สุดสนุกให้แก่ผู้เข้าร่วมทุกเพศทุกวัย</p>
-
-  <h2>2. วัตถุประสงค์</h2>
-  <ul>
-    <li>ส่งเสริมศิลปินไทยในสาย Art Toy และสินค้าไลฟ์สไตล์ให้เป็นที่รู้จักในวงกว้าง</li>
-    <li>สร้างพื้นที่แสดงผลงาน ร่วมแลกเปลี่ยน และขยายเครือข่ายของศิลปินรุ่นใหม่</li>
-    <li>เปิดตลาดใหม่ให้สินค้า Art Toy และสินค้าอาหารแนวสร้างสรรค์</li>
-    <li>สร้างภาพลักษณ์ใหม่ให้ห้าง Phenix เป็นพื้นที่แห่งวัฒนธรรมร่วมสมัย</li>
-    <li>ดึงดูดกลุ่มครอบครัว วัยรุ่น และผู้สนใจศิลปะให้เข้าห้างเพิ่มขึ้น</li>
-  </ul>
-
-  <h2>3. รูปแบบกิจกรรม</h2>
-  <p><strong>3.1 นิทรรศการซุปเปอร์ทอย</strong></p>
-  <p>- แสดงผลงาน Art Toy ของศิลปินไทยกว่า 20 ราย<br>- โซนจัดแสดงผลงานเด่นพร้อมไฟส่อง, ป้ายชื่อ และเรื่องราวของแต่ละตัว</p>
-  <p><strong>3.2 เวิร์กช็อปสร้างทอยในฝัน</strong></p>
-  <p>- เปิดเวิร์กช็อปประดิษฐ์ Art Toy จากวัสดุพื้นฐาน<br>- เปิดรับเยาวชนและบุคคลทั่วไป</p>
-  <p><strong>3.3 โซนซุปเปอร์ฟู๊ด</strong></p>
-  <p>- จำหน่ายอาหารและขนมแนวแฟนตาซี เช่น “ไอติมรูปร่างยูนิคอร์น”, “โดนัททรงจรวด” ฯลฯ<br>- พันธมิตรร้านอาหารร่วมจัดเมนูพิเศษประจำงาน</p>
-  <p><strong>3.4 ตลาดซุปเปอร์ครีเอทีฟ</strong></p>
-  <p>- จำหน่ายสินค้าศิลปะ ของเล่นสะสม สินค้าลิขสิทธิ์ และของที่ระลึกจากศิลปิน<br>- พื้นที่พิเศษให้ผู้เข้าร่วม Custom Art Toy ได้ด้วยตนเอง</p>
-  <p><strong>3.5 Super Show & Cosplay Parade</strong></p>
-  <p>- การแสดงบนเวที, การเดินพาเหรดตัวละคร Art Toy และ Cosplay<br>- สร้างการมีส่วนร่วมและจุดถ่ายภาพภายในงาน</p>
-
-  <h2>4. ระยะเวลาและสถานที่จัดงาน</h2>
-  <p><strong>สถานที่:</strong> พื้นที่ Event Hall ชั้น 5 ห้างสรรพสินค้า Phenix</p>
-  <p><strong>ระยะเวลา:</strong> 15 มิถุนายน – 31 กรกฎาคม 2568</p>
-  <p><strong>เวลา:</strong> 10.00 – 21.00 น. (ทุกวันศุกร์–อาทิตย์)</p>
-
-  <h2>5. งบประมาณ (โดยประมาณ)</h2>
-  <table>
-    <tr><th>รายการ</th><th>งบประมาณ (บาท)</th></tr>
-    <tr><td>ค่าตอบแทนศิลปิน</td><td>250,000</td></tr>
-    <tr><td>ค่าตกแต่งพื้นที่และเวที</td><td>200,000</td></tr>
-    <tr><td>ค่าวัสดุเวิร์กช็อปและกิจกรรมเด็ก</td><td>90,000</td></tr>
-    <tr><td>ค่าประชาสัมพันธ์ (Online/Offline)</td><td>180,000</td></tr>
-    <tr><td>ค่าบริหารจัดการและบุคลากร</td><td>130,000</td></tr>
-    <tr><td>ค่าเบ็ดเตล็ด</td><td>50,000</td></tr>
-    <tr><td class="highlight">รวมทั้งสิ้น</td><td class="highlight">900,000</td></tr>
-  </table>
-
-  <h2>6. ผลที่คาดว่าจะได้รับ</h2>
-  <ul>
-    <li>เกิดความตื่นตัวในวงการ Art Toy และการออกแบบของเยาวชนไทย</li>
-    <li>ขยายตลาดสินค้า Art Toy สู่กลุ่มใหม่</li>
-    <li>เพิ่มผู้เข้าชมห้างช่วงจัดกิจกรรม</li>
-    <li>สร้างภาพจำใหม่ให้ห้าง Phenix เป็นแหล่งรวมวัฒนธรรมสร้างสรรค์</li>
-    <li>เกิดความร่วมมือระหว่างศิลปิน ภาคธุรกิจ และผู้จัดกิจกรรมในอนาคต</li>
-  </ul>
-
-  <h2>7. ติดต่อสอบถามเพิ่มเติม</h2>
-  <p><strong>ที่อยู่:</strong> 179 หมู่ 2 ต.หางดง อ.หางดง จ.เชียงใหม่ 50230</p>
-  <p><strong>โทรศัพท์:</strong> 081 020 7822</p>
-  <p><strong>อีเมล:</strong> dpscheck@gmail.com</p>
-  <p><strong>เว็บไซต์:</strong> www.omnipathgroup.com</p>
+<section id="artists" class="section">
+  <h2>ศิลปินที่เข้าร่วม</h2>
+  <div class="artist-slider" id="artistSlider">
+    <!-- ศิลปินจะถูกเพิ่มผ่าน JavaScript -->
+  </div>
+  <div class="slider-buttons">
+    <button onclick="scrollArtists('left')">&larr;</button>
+    <button onclick="scrollArtists('right')">&rarr;</button>
+  </div>
 </section>
 
-
-
-<section id="calendar-section">
+<section id="calendar-section" class="section">
   <h2>ปฏิทินกิจกรรม</h2>
   <div id="calendar"></div>
 </section>
-<section id="artists" class="section">
-  <h2>ศิลปินที่เข้าร่วม</h2>
-  <div class="artists">
-    <div class="artist-card">
-      <img src="https://images.unsplash.com/photo-1589558929234-8460e1a11f66?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Artist 1">
-      <h3>Alex Face</h3>
-    </div>
-    <div class="artist-card">
-      <img src="https://images.unsplash.com/photo-1608531079785-3b8b9bd4d61b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Artist 2">
-      <h3>Phannapast</h3>
-    </div>
-    <div class="artist-card">
-      <img src="https://images.unsplash.com/photo-1557844352-761f2565b6d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Artist 3">
-      <h3>Suntur</h3>
-    </div>
-  </div>
-</section>
-<section id="gallery">
+
+<section id="gallery" class="section">
   <h2>แกลเลอรี่</h2>
-  <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1589558929234-8460e1a11f66" alt="Gallery 1">
-    <img src="https://images.unsplash.com/photo-1608531079785-3b8b9bd4d61b" alt="Gallery 2">
-    <img src="https://images.unsplash.com/photo-1557844352-761f2565b6d6" alt="Gallery 3">
+  <div class="gallery" id="galleryImages">
+    <!-- รูปภาพแกลเลอรี่จะถูกโหลดจาก JS -->
   </div>
 </section>
 
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    var calendarEl = document.getElementById('calendar');
-    var calendar = new FullCalendar.Calendar(calendarEl, {
-      initialView: 'dayGridMonth',
-      locale: 'th',
-      headerToolbar: {
-        left: 'prev,next today',
-        center: 'title',
-        right: 'dayGridMonth,timeGridWeek,timeGridDay'
-      },
-      events: [
-        {
-          title: 'เปิดงาน SuperToy SuperFood',
-          start: '2025-06-15',
-          end: '2025-06-17'
-        },
-        {
-          title: 'Cosplay Parade',
-          start: '2025-07-12T14:00:00',
-          end: '2025-07-12T18:00:00'
-        },
-        {
-          title: 'Workshop สร้าง Art Toy ของคุณเอง',
-          start: '2025-07-20T10:00:00',
-          end: '2025-07-20T15:00:00'
-        }
-      ]
-    });
-    calendar.render();
-  });
-</script>>
-
+<script src="script.js"></script>
 </body>
 </html>
