@@ -69,40 +69,6 @@
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.4);
     }
-    .artist-slider {
-      display: flex;
-      overflow-x: auto;
-      gap: 1.5rem;
-      scroll-behavior: smooth;
-      padding: 1rem 0;
-    }
-    .artist-card {
-      background: #2a2a3b;
-      border-radius: 20px;
-      padding: 1rem;
-      text-align: center;
-      flex: 0 0 300px;
-      box-shadow: 0 0 15px rgba(255, 0, 200, 0.25);
-    }
-    .artist-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 12px;
-    }
-    .slider-buttons {
-      text-align: center;
-      margin-top: 1rem;
-    }
-    .slider-buttons button {
-      background: #FF00C8;
-      border: none;
-      color: white;
-      padding: 0.5rem 1rem;
-      margin: 0 0.5rem;
-      cursor: pointer;
-      border-radius: 8px;
-    }
     footer {
       background: #141420;
       color: white;
@@ -118,6 +84,24 @@
       padding: 1rem;
       box-shadow: 0 0 15px rgba(0,0,0,0.3);
     }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      color: white;
+    }
+    th, td {
+      border: 1px solid #555;
+      padding: 0.75rem;
+      text-align: left;
+    }
+    th {
+      background: #2a2a3b;
+    }
+    td.highlight {
+      font-weight: bold;
+      background: #333;
+    }
   </style>
 </head>
 <body>
@@ -127,7 +111,6 @@
   <p>นิทรรศการศิลปะและอาหารสร้างสรรค์ ณ ห้าง Phenix</p>
   <nav>
     <a href="#about">เกี่ยวกับโครงการ</a>
-    <a href="#artists">ศิลปิน</a>
     <a href="#calendar-section">ปฏิทินกิจกรรม</a>
     <a href="#gallery">แกลเลอรี่</a>
     <a href="#contact">ติดต่อ</a>
@@ -195,7 +178,6 @@
   <p><strong>อีเมล:</strong> dpscheck@gmail.com</p>
   <p><strong>เว็บไซต์:</strong> www.omnipathgroup.com</p>
 </section>
-
 
 <section id="calendar-section">
   <h2>ปฏิทินกิจกรรม</h2>
