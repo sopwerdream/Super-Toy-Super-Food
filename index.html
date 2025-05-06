@@ -205,9 +205,17 @@
 </footer>
 
 <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js'></script>
+<!-- FullCalendar JS -->
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js'></script>
+
+<!-- Lightbox JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+<!-- Custom JS -->
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     var calendarEl = document.getElementById('calendar');
+
     var calendar = new FullCalendar.Calendar(calendarEl, {
       initialView: 'dayGridMonth',
       locale: 'th',
@@ -220,20 +228,24 @@
         {
           title: 'เปิดงาน SuperToy SuperFood',
           start: '2025-06-15',
-          end: '2025-06-17'
+          end: '2025-06-17',
+          description: 'พบกับศิลปินกว่า 20 ราย และเมนูอาหารแฟนตาซีพิเศษ!'
         },
         {
           title: 'Cosplay Parade',
           start: '2025-07-12T14:00:00',
-          end: '2025-07-12T18:00:00'
+          end: '2025-07-12T18:00:00',
+          description: 'พาเหรดตัวละคร Art Toy และ Cosplay สุดอลังการ!'
         },
         {
           title: 'Workshop สร้าง Art Toy ของคุณเอง',
           start: '2025-07-20T10:00:00',
-          end: '2025-07-20T15:00:00'
+          end: '2025-07-20T15:00:00',
+          description: 'เรียนทำ Art Toy พร้อมวัสดุครบชุด สำหรับเยาวชนและบุคคลทั่วไป'
         }
       ]
     });
+
     calendar.render();
   });
 </script>
