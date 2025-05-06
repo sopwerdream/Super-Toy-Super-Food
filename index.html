@@ -24,7 +24,7 @@
 
 <section id="about" class="section">
   <h2>เกี่ยวกับโครงการ</h2>
-  <p>SuperToy SuperFood คือเวทีแห่งความคิดสร้างสรรค์ ที่เปิดโอกาสให้ศิลปินไทยได้นำเสนอผลงาน Art Toy ควบคู่กับการออกแบบเมนูอาหารแฟนตาซี เพื่อจัดแสดงในพื้นที่สุดล้ำที่ห้างสรรพสินค้า Phenix</p>
+ <p>SuperToy SuperFood คือเวทีแห่งความคิดสร้างสรรค์ ที่เปิดโอกาสให้ศิลปินไทยได้นำเสนอผลงาน Art Toy ควบคู่กับการออกแบบเมนูอาหารแฟนตาซี เพื่อจัดแสดงในพื้นที่สุดล้ำที่ห้างสรรพสินค้า Phenix</p>
   <h2>1. หลักการและเหตุผล</h2>
   <p>ในยุคที่วัฒนธรรมป๊อปและการออกแบบร่วมสมัยกลายเป็นพลังสำคัญในการขับเคลื่อนเศรษฐกิจสร้างสรรค์ (Creative Economy) ศิลปะในรูปแบบของ Art Toy ได้กลายมาเป็นอีกหนึ่ง Soft Power ที่เติบโตอย่างรวดเร็ว ทั้งในระดับประเทศและระดับโลก</p>
   <p>โครงการ “ซุปเปอร์ทอย ซุปเปอร์ฟู๊ด” ได้รับแรงบันดาลใจจากการผสมผสานระหว่างโลกแห่งจินตนาการของ Art Toy กับโลกแห่งความสุขของอาหารสุดครีเอทีฟ โดยจัดขึ้น ณ ห้างสรรพสินค้า Phenix เพื่อเปิดพื้นที่สร้างแรงบันดาลใจ สร้างตลาดใหม่สำหรับนักสร้างสรรค์ และมอบประสบการณ์สุดสนุกให้แก่ผู้เข้าร่วมทุกเพศทุกวัย</p>
@@ -79,19 +79,15 @@
 
 <section id="gallery" class="section">
   <h2>แกลเลอรี่</h2>
-  <div class="gallery" id="galleryImages">
-    <!-- รูปภาพจะโหลดจาก script.js -->
-  </div>
+  <div class="gallery" id="galleryContainer"></div>
 </section>
 
 <section id="artists" class="section">
   <h2>ศิลปินที่เข้าร่วม</h2>
-  <div class="artist-slider" id="artistSlider">
-    <!-- ศิลปินจะโหลดจาก script.js -->
-  </div>
-  <div class="slider-buttons">
-    <button onclick="scrollArtists('left')">&larr;</button>
-    <button onclick="scrollArtists('right')">&rarr;</button>
+  <div class="artist-slider-wrapper">
+    <button class="slider-button left" onclick="scrollArtists('left')">&#8592;</button>
+    <div class="artist-slider" id="artistSlider"></div>
+    <button class="slider-button right" onclick="scrollArtists('right')">&#8594;</button>
   </div>
 </section>
 
