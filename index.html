@@ -203,15 +203,20 @@
   <div id="calendar"></div>
 </section>
 
-<script src="https://unpkg.com/@fullcalendar/core@5.10.1/main.min.js"></script>
-<script src="https://unpkg.com/@fullcalendar/daygrid@5.10.1/main.min.js"></script>
-<script src="https://unpkg.com/@fullcalendar/interaction@5.10.1/main.min.js"></script>
-<script src="https://unpkg.com/@fullcalendar/core@5.10.1/locales/th.js"></script>
+<section id="gallery">
+  <h2>แกลเลอรี่</h2>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1589558929234-8460e1a11f66" alt="Gallery 1">
+    <img src="https://images.unsplash.com/photo-1608531079785-3b8b9bd4d61b" alt="Gallery 2">
+    <img src="https://images.unsplash.com/photo-1557844352-761f2565b6d6" alt="Gallery 3">
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     var calendarEl = document.getElementById('calendar');
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      plugins: [ FullCalendar.dayGridPlugin, FullCalendar.interactionPlugin ],
       initialView: 'dayGridMonth',
       locale: 'th',
       headerToolbar: {
@@ -219,54 +224,27 @@
         center: 'title',
         right: 'dayGridMonth,timeGridWeek,timeGridDay'
       },
-      eventDidMount: function(info) {
-        if (info.event.extendedProps.description) {
-          var tooltip = document.createElement('div');
-          tooltip.innerHTML = '<b>' + info.event.title + '</b><br>' + info.event.extendedProps.description;
-          tooltip.style.position = 'absolute';
-          tooltip.style.zIndex = 999;
-          tooltip.style.background = '#fff';
-          tooltip.style.color = '#000';
-          tooltip.style.padding = '8px';
-          tooltip.style.borderRadius = '8px';
-          tooltip.style.boxShadow = '0 0 10px rgba(0,0,0,0.25)';
-          tooltip.style.display = 'none';
-          document.body.appendChild(tooltip);
-
-          info.el.addEventListener('mouseenter', function(e) {
-            tooltip.style.left = e.pageX + 'px';
-            tooltip.style.top = e.pageY + 'px';
-            tooltip.style.display = 'block';
-          });
-          info.el.addEventListener('mouseleave', function() {
-            tooltip.style.display = 'none';
-          });
-        }
-      },
       events: [
         {
           title: 'เปิดงาน SuperToy SuperFood',
           start: '2025-06-15',
-          end: '2025-06-17',
-          description: 'พบกับศิลปินกว่า 20 ราย และเมนูอาหารแฟนตาซีพิเศษ!'
+          end: '2025-06-17'
         },
         {
           title: 'Cosplay Parade',
           start: '2025-07-12T14:00:00',
-          end: '2025-07-12T18:00:00',
-          description: 'พาเหรดตัวละคร Art Toy และ Cosplay สุดอลังการ!'
+          end: '2025-07-12T18:00:00'
         },
         {
           title: 'Workshop สร้าง Art Toy ของคุณเอง',
           start: '2025-07-20T10:00:00',
-          end: '2025-07-20T15:00:00',
-          description: 'เรียนทำ Art Toy พร้อมวัสดุครบชุด สำหรับเยาวชนและบุคคลทั่วไป'
+          end: '2025-07-20T15:00:00'
         }
       ]
     });
     calendar.render();
   });
-</script>
+</script>>
 
 </body>
 </html>
