@@ -197,3 +197,10 @@ footer {
   from { transform: translateY(10px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
+.fc-daygrid-day-number {
+  color: black !important;
+  font-weight: bold;
+  font-size: 0.9rem;
+  z-index: 2;
+  position: relative;
+}
